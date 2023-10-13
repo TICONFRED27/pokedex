@@ -31,7 +31,7 @@ function App() {
     name: "mew",
     },
   ];
-  
+  const pokemon = pokemonList[0];
 
   const [pokemonIndex , setpokemonIndex] = useState(0);
   
