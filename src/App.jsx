@@ -31,7 +31,7 @@ function App() {
     name: "mew",
     },
   ];
-  const pokemon = pokemonList[0];
+  
 
   const [pokemonIndex , setpokemonIndex] = useState(0);
   
@@ -42,9 +42,9 @@ function App() {
   
 
   return (
-    <div> <PokemonCard pokemon = {pokemon}/>
-    <button onClick={handlePrevClick}>precedent</button>
-    <button onClick={handleNextClick}>suivant</button>
+    <div> <PokemonCard pokemon = {pokemonList[pokemonIndex]}/>
+    <button disabled={pokemonIndex <= 0} onClick={handlePrevClick}>precedent</button>
+    <button disabled= {pokemonIndex >= pokemonList.length -1} onClick={handleNextClick}>suivant</button>
 
     </div>
   )
