@@ -1,12 +1,14 @@
 import { useState } from 'react'
 
-function NavBar({pokemonList}){
+
+function NavBar({pokemonList, pokemonIndex, setpokemonIndex}){
+/*   const [pokemonIndex , setpokemonIndex] = useState(0); */
+console.log('pokelist',pokemonList);
+  const handleNextClick = () => {
+      setpokemonIndex(pokemonIndex +1)}
+  const handlePrevClick = () => {
+      setpokemonIndex(pokemonIndex -1)}
    
-    const [pokemonIndex , setpokemonIndex] = useState(0);
-    const handleNextClick = () => {
-        setpokemonIndex(pokemonIndex +1)}
-      const handlePrevClick = () => {
-        setpokemonIndex(pokemonIndex -1)}
       
     return(
         <>
